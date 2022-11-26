@@ -3,7 +3,6 @@
 function setup(){
   createCanvas(300, 200);
   background(0,0,250);
-  fill(255,255,0)
   for(let i = 0; i < 12; i++){
     const theta = TWO_PI * i / 12; // TWO_PI は円周率πの2倍（ほかに PI, HALF_PI, QUARTER_PI　がある）
     const x = 150 + cos(theta) * 50; // 関数 cos の戻り値を使用
@@ -13,6 +12,8 @@ function setup(){
 }
 
 function star(cx, cy, r){
+  fill(255,255,0)
+  stroke(255,255,0)
   beginShape();    // 点つなぎを始める
   for(let i = 0; i < 5; i++){
     const theta = TWO_PI * i * 2 / 5 - HALF_PI;
@@ -21,6 +22,7 @@ function star(cx, cy, r){
     vertex(x, y);  // 次につなぐ点を１つ増やす
   }
   endShape(CLOSE); // 点つなぎを終わる
+  
 }
 
 
