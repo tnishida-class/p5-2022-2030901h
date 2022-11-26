@@ -1,12 +1,16 @@
 // テキスト「関数を作る(1) 引数のある関数」
 // 練習問題：星を描く関数を改造して正N角形を描画する関数を作ってみよう
 function setup(){
-  createCanvas(300, 100);
+  createCanvas(400, 100);
   background(200);
   fill(0);
   crossmark(10, 10, 90, 90);
   ngmark(150, 50, 80);
   star(250, 50, 40);
+  let x =random(3,30);
+  let n = round(x);
+  regularPolygon(n, 50, 50, 50)
+  
 }
 
 function crossmark(x1, y1, x2, y2){
@@ -30,6 +34,20 @@ function star(cx, cy, r){
     let theta = TWO_PI * i * 2 / 5 - HALF_PI;
     let x = cx + cos(theta) * r;
     let y = cy + sin(theta) * r;
+    vertex(x,y);
+  }
+  endShape(CLOSE);
+}
+
+function regularPolygon(n, cx, cy, r){
+  
+
+  beginShape();
+  for(let i = 0; i < n; i++){
+    const theta = TWO_PI * i / n; // TWO_PI は円周率πの2倍（ほかに PI, HALF_PI, QUARTER_PI　がある）
+    const x = 350 + cos(theta) * 50; // 関数 cos の戻り値を使用
+    const y = 50 + sin(theta) * 50; // 関数 sin の戻り値を使用
+    ; // 関数 ellipse の副作用で円が描画される
     vertex(x,y);
   }
   endShape(CLOSE);
