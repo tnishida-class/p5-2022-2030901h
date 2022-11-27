@@ -45,6 +45,5 @@ function setup(){
     fill(0);
     text(scores[i].toPrecision(3), i * dx, height - h);
   }
-
   // BLANK[5] 平均点の線を引きます
 }
