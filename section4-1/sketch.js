@@ -60,12 +60,7 @@ function setup(){
     else{
       fill(100,100,100);
     }
-   
-
   
-  
-    
-
     rect(i * dx + 2, height - h, dx - 4, h);
 
    
