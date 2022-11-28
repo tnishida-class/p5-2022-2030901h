@@ -102,16 +102,19 @@ function result(){
 
 
 function judge(){
-  if(number1==7 && number2==7 && number3==7){
-    hit=1;
-  }
-  else if(number1 == number2 && number2 == number3 ){
-     hit=2;
+  if(number1 == number2 && number2 == number3 ){
+    if(number3==7){
+      hit=1;
+    }
+    else{
+     hit=2; 
+    }
   }
   else{
-     hit=3;
+    hit=3;
   }
 }
+
 
 
 function keyPressed(){
