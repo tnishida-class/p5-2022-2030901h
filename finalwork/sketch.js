@@ -102,10 +102,10 @@ function result(){
 
 
 function judge(){
-  if(number1==7, number2==7, number3==7){
+  if(number1==7 && number2==7 && number3==7){
     hit=1;
   }
-  else if((number1 == number2)&&(number2 == number3)){
+  else if(number1 == number2 && number2 == number3 ){
      hit=2;
   }
   else{
